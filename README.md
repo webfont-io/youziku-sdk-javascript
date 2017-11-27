@@ -34,9 +34,9 @@ var youzikuClient = new YouzikuClient();
 #### 备注:直接返回所有格式的@fontface
 ``` javascript
 var entity={
-AccessKey:'xxxxxx',
-Content:'有字库，让中文跃上云端！',
-Tag: '.test1'  
+  AccessKey:'xxxxxx',
+  Content:'有字库，让中文跃上云端！',
+  Tag: '.test1'  
 };
 youzikuClient.getFontFace(entity, function (json) {
    console.log(json.FontFamily);　　　　　　　
@@ -51,9 +51,9 @@ youzikuClient.getFontFace(entity, function (json) {
 #### 备注：直接返回流（woff流）的@fontface
 ``` javascript
 var entity={
-AccessKey:'xxxxxx',
-Content:'有字库，让中文跃上云端！',
-Tag: '.test1'  
+  AccessKey:'xxxxxx',
+  Content:'有字库，让中文跃上云端！',
+  Tag: '.test1'  
 };
 
 youzikuClient.getWoffBase64StringFontFace(entity, function (json) {
