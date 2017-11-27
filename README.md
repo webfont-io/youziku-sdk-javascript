@@ -76,7 +76,7 @@ data.Tags.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云�
 data.Tags.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云端,中国文字之美！', Tag: '#id2' });
 
 
-youzikuClient.getBatchFontFace(batchEntity, function (json) {
+youzikuClient.getBatchFontFace(data, function (json) {
 
    for (var i = 0; i < json.FontfaceList.length; i++) {
         var item = json.FontfaceList[i];
@@ -101,7 +101,7 @@ woffdata.Tags.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上�
 woffdata.Tags.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云端,中国文字之美！Woff格式', Tag: '.test2' });
 
 
-youzikuClient.getBatchWoffFontFace(batchEntity, function (json) {
+youzikuClient.getBatchWoffFontFace(woffdata, function (json) {
 
    for (var i = 0; i < json.FontfaceList.length; i++) {
         var item = json.FontfaceList[i];
@@ -129,7 +129,7 @@ cdata.Datas.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云
 cdata.Datas.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云端，中国文字之美！Woff格式自定义路径接口', Url: 'youziku/test2' });
 
 //1.捕获请求完成回调
- youzikuClient.createBatchWoffWebFontAsync(customPathEntity, function (json) {
+ youzikuClient.createBatchWoffWebFontAsync(cdata, function (json) {
      console.log(json.ErrorMessage);　　　　　　
      console.log(json.Code);
 })
