@@ -39,11 +39,11 @@ var entity={
   Tag: '.test1'  
 };
 youzikuClient.getFontFace(entity, function (json) {
-   console.log(json.FontFamily);　　　　　　　
+   console.log(json.FontFamily);
    console.log(json.FontFace);
    console.log(json.Tag);
-   console.log(json.ErrorMessage);　　　　　　
-   console.log(json.Code);　　　　　　　      
+   console.log(json.ErrorMessage);
+   console.log(json.Code);
 });
 
 ```
@@ -57,11 +57,11 @@ var entity={
 };
 
 youzikuClient.getWoffBase64StringFontFace(entity, function (json) {
-   console.log(json.FontFamily);　　　　　　　　
+   console.log(json.FontFamily);
    console.log(json.FontFace);
    console.log(json.Tag);
-   console.log(json.ErrorMessage);　　　　　　　
-   console.log(json.Code);　　　　　　　       
+   console.log(json.ErrorMessage);　
+   console.log(json.Code);
 });
 ```
 ## 3.多标签生成模式
@@ -80,12 +80,12 @@ youzikuClient.getBatchFontFace(data, function (json) {
 
    for (var i = 0; i < json.FontfaceList.length; i++) {
         var item = json.FontfaceList[i];
-        console.log(item.FontFamily);　　　　　　　
+        console.log(item.FontFamily);
         console.log(item.FontFace);
         console.log(item.Tag);
        
         }
-        console.log(json.ErrorMessage);　　　　　　　
+        console.log(json.ErrorMessage);
         console.log(json.Code);
  });
 
@@ -105,12 +105,12 @@ youzikuClient.getBatchWoffFontFace(woffdata, function (json) {
 
    for (var i = 0; i < json.FontfaceList.length; i++) {
         var item = json.FontfaceList[i];
-        console.log(item.FontFamily);　　　　　　　　
+        console.log(item.FontFamily);
         console.log(item.FontFace);
         console.log(item.Tag);
           
         }
-        console.log(json.ErrorMessage);　　　　
+        console.log(json.ErrorMessage);　　
         console.log(json.Code);
  });
 
@@ -130,7 +130,7 @@ cdata.Datas.push({ AccessKey: 'xxxxxx', Content: '有字库，让中文跃上云
 
 //1.捕获请求完成回调
  youzikuClient.createBatchWoffWebFontAsync(cdata, function (json) {
-     console.log(json.ErrorMessage);　　　　　　
+     console.log(json.ErrorMessage);
      console.log(json.Code);
 })
 //2.不捕获请求完成回调
